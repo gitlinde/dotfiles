@@ -1,1 +1,43 @@
-/home/linde/frameworkvault/linux todo.md
+%% symlinked to an obsidian vault from the repo %%
+- [ ] study if u need a shell prompt. maybe starship?
+- [ ] find good versions of useful programs
+	- [ ] image viewer
+	- [ ] pdf viewer
+	- [ ] excel/word format (libreoffice?)
+	- [ ] recording (OBS!!!)
+- [ ] make it easy / doable to dim screen further
+	- litearlly impossible btw 
+- [ ] i need one to move a window from one workspace to another
+- [ ] is there a way to move multiple windows? "tag" feature maybe?
+- [x] scratchpad
+	- [ ] named scratch pad
+		- [ ] actually find a use for them lol?
+- [ ] hotkey for turning screen on/off
+- [ ] hotkey for closing everything else than focused window
+	- [ ] in one workspace?
+- [ ] hotkey for restarting mango
+- [ ] DISABLE VIVALDI NOTIFICATIOSN
+	- [x] email
+- [ ] find terminal editor better than micro
+	- [ ] or another way to access .conf files easily
+	- [ ] learn neovimXD
+- [x] Fix mouse speed, scrolling speed
+- [x] Fix cursor size
+- [x] find a file manager that isn't ass
+	- [ ] delete dolphin
+- [x] create repo for dotfiles
+	- [x] create symlink for dotfiles
+		- [ ] figure out the difference between normal link and symlink
+- [x] mouse gestures
+- [x] notification when reloading--
+- [x] add noctalia shell launcher bind for super+space
+- [x] replace every bind with ctrl / alt
+	- [x] this really pisses me off
+	- [x] almost finished
+- [x] WASD window control scheme
+	- [x] shift WASD for moving the windows
+- [x] maybe Z and X to go left and right in workspaces (maybe q,e?)
+- [x] workspace setup, i want MONACLE for vivaldi
+	- [x] auto start vivaldi on monacle workspace
+- [x] choose better border color / gaps
+	- [x] or remove it :)
