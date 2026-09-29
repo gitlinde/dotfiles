@@ -1,0 +1,59 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+    "disable_ai": true,
+    "minimap": {
+        "show": "always"
+    },
+    "terminal": {
+        "font_family": "Arial",
+    },
+    "tab_size": 4,
+    "cli_default_open_behavior": "existing_window",
+    "extend_comment_on_newline": false,
+    "project_panel": {
+        "dock": "left",
+    },
+    "icon_theme": {
+        "mode": "dark",
+        "light": "Zed (Default)",
+        "dark": "Zed (Default)",
+    },
+    "ui_font_size": 16,
+    // "buffer_font_size": 15,
+
+    "theme": {
+        "mode": "dark",
+        "light": "One Light",
+        "dark": "Carbonfox - blurred",
+    },
+
+    "indent_guides": {
+        "enabled": true,
+
+        "coloring": "indent_aware",
+    },
+    "colorize_brackets": true,
+    "buffer_font_features": {
+        "calt": false,
+    },
+    // "theme_overrides": {
+    //     "One Dark": {
+    //         "editor.document_highlight.background": "#FF0000",
+    //     },
+    // },
+
+    "experimental.theme_overrides": {
+        "editor.document_highlight.bracket_background": "#ff000020",
+    },
+
+    // "theme_overrides": {
+    //     "editor.document_highlight.read_background": "#FF0000",
+    // },
+}

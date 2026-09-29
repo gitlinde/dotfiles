@@ -1,0 +1,34 @@
+#https://alacritty.org/config-alacritty.html
+
+[font]
+size = 12
+
+[window]
+opacity = 0.92
+#blur = true # doesn't work on mango
+
+#7CB2E0 <- nix light blue
+#4E73BC <- nix dark blue
+
+[colors]
+cursor = { cursor = "#7CB2E0" }
+transparent_background_colors = true
+
+#primary = { foreground = "#7CB2E0" }
+
+#primary = { foreground = "#BFE3FF" }
+
+
+[cursor]
+style = {
+	#shape = "Beam"
+	shape = "Underline",
+	blinking = "On",
+
+
+#	blink_timeout = 5
+}
+
+blink_interval = 400
+blink_timeout = 2
+
