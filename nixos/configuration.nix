@@ -131,7 +131,7 @@
 
 
     environment.shellAliases = {
-        nixos-flakeswitch = "sudo nixos-rebuild switch --flake ~/dotfiles#nixos";
+        nixos-flakeswitch = "sudo nixos-rebuild switch --flake ~/dotfiles/nixos #nixos";
     };
 
 
