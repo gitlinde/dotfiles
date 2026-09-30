@@ -1,5 +1,6 @@
 %% symlinked to an obsidian vault from the repo %%
 - [ ] study if u need a shell prompt. maybe starship?
+- [ ] find a task manager
 - [ ] find good versions of useful programs
 	- [ ] image viewer
 	- [ ] pdf viewer
@@ -12,7 +13,7 @@
 - [x] scratchpad
 	- [ ] named scratch pad
 		- [ ] actually find a use for them lol?
-- [ ] hotkey for turning screen on/off
+- [x] hotkey for turning screen on/off
 - [ ] hotkey for closing everything else than focused window
 	- [ ] in one workspace?
 - [ ] hotkey for restarting mango

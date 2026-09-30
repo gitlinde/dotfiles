@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, lib, ... }:
+{ pkgs, inputs, lib, ... }:
 
 {
   imports =
@@ -9,8 +9,6 @@
 
 	# to search, run: $ nix search wget
 	environment.systemPackages = with pkgs; [
-
-
 		# Theming
 		banana-cursor # https://github.com/ful1e5/banana-cursors
 		bibata-cursors
@@ -33,7 +31,6 @@
 		bitwarden-desktop
 		kdePackages.polkit-kde-agent-1
 
-
 		# Dependencies
 		jq # for mango
 		swaybg # for mango (???)
@@ -41,7 +38,7 @@
 		kdePackages.kio # needed since 25.11 (DOLPHIN)
 		kdePackages.kio-fuse #to mount remote filesystems via FUSE (DOLPHIN)
 		kdePackages.kio-extras #extra protocols support (sftp, fish and more) (DOLPHIN)
-
+		kdePackages.kio-admin
 
 		# Screenshot
 		grim		#Capture the screen or a region to a file
@@ -97,6 +94,7 @@
 		ghcid # Haskell compiler for fast reloading
 		haskell-language-server # LSP
 		ghc # Haskell compiler
+		nixd # nix LSP
 		#quickshell
 		#qt6.qtdeclarative # LSP doesn't work with zed for some reason
 		#kdePackages.qtdeclarative
@@ -112,6 +110,7 @@
 		firefox
 		vivaldi
 		google-chrome
+		ladybird
 
 
 		# Players (music/video)
@@ -120,8 +119,8 @@
 
 
 		# Social media (discord)
-		discordo
-		abaddon
+		#discordo
+		#abaddon
 		dissent
 		discord-ptb # proprietary garbage
 		#webcord
@@ -280,9 +279,9 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users."linde" = {
 		isNormalUser = true;
-		description = "eliaslinde";
+		description = "the only real user";
 		extraGroups = [ "networkmanager" "wheel" "docker" ];
-		packages = with pkgs; [];
+		# packages = with pkgs; [];
 	#	shell = pkgs.fish;
 	};
 
@@ -294,13 +293,11 @@
 	virtualisation.docker.enable = true;
 
 
-
 	hardware.logitech.wireless.enable = true;
 
 	programs.nix-ld.enable = true; # to run unpatches binaries
 	programs.mango.enable = true;
 	programs.mango.package = inputs.mangowm.packages.${pkgs.system}.default;
-
 
 	# change bash terminal color to dark blue
 	programs.bash.promptInit = ''
@@ -359,67 +356,39 @@
 #   enableSSHSupport = true;
 # };
 
-# legacy hyprland
-#  programs.hyprland = {
-#  	enable = true;
-# 	withUWSM = true;
-# 	xwayland.enable = true;
-# };
-
-# notification daemon, though i think quickshell will
-# handle this in the future
-# NOCTALIA SHELL HAS OVERTAKEN!
-#  services.dunst = {
-#    enable = true;
-#    settings = {
-#      global = {
-        # Visuals
-#        width = 280;
-#        height = 150;
-#        origin = "top-right";
-#        offset = "20x20";
-#        font = "Monospace 10";
-#       frame_width = 1;
-#       frame_color = "#45475a";
-#        corner_radius = 4;
-#
-#        # Behavior
-#        timeout = 5; # Seconds
-#        sort = true;
-#        alignment = "left";
-#      };
-#      urgency_normal = {
-#        background = "#1e1e2e";
-#        foreground = "#cdd6f4";
-#      };
-#    };
-#  };
-
-
-
-
-
 # DISABLED IN FAVOUR OF NOCTALIA LOCK # nvm
 # can go here maybe https://docs.noctalia.dev/greeter/installation/?section=nixos-declarative-setup#nixos-declarative-setup
+# 	programs.qylock = {
+# 		enable = true;
+# 		theme = "field"; # Choose any folder name from the themes/ directory in their repository
+#
+# 		sddm.enable = true;       # Installs the theme and activates it for SDDM (default)
+# 		quickshell.enable = true; # Adds the `qylock-lock` wrapper utility to your PATH (default)
+#
+# 		# Optional: Per-theme overrides (replaces interactive script prompts)
+# 		#themeOptions = {
+# 		# terraria.backgroundMode = "time"; # time | random | static
+# 		# Genshin.backgroundMode = "time";
+# 		# clockwork.orbital = {
+# 		#  themeMode = "dark";
+# 		# enableWindup = true;
+# 		#};
+# 		# osu.gameMode = "menu"; # menu | game
+# 		#};
+# 	};
 
-	programs.qylock = {
-		enable = true;
-		theme = "field"; # Choose any folder name from the themes/ directory in their repository
 
-		sddm.enable = true;       # Installs the theme and activates it for SDDM (default)
-		quickshell.enable = true; # Adds the `qylock-lock` wrapper utility to your PATH (default)
-
-		# Optional: Per-theme overrides (replaces interactive script prompts)
-		#themeOptions = {
-		# terraria.backgroundMode = "time"; # time | random | static
-		# Genshin.backgroundMode = "time";
-		# clockwork.orbital = {
-		#  themeMode = "dark";
-		# enableWindup = true;
-		#};
-		# osu.gameMode = "menu"; # menu | game
-		#};
-	};
+    services.displayManager.noctalia-greeter = {
+        enable = true;
+        settings = {
+            cursor.size = 24;
+            keyboard.layout = "us";
+        };
+        cursorTheme = {
+            package = pkgs.banana-cursor;
+            name = "Banana";
+        };
+    };
 
 	# Open ports in the firewall.
 	# networking.firewall.allowedTCPPorts = [ ... ];
