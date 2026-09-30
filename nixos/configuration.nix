@@ -10,7 +10,7 @@
 	# to search, run: $ nix search wget
 	environment.systemPackages = with pkgs; [
 
-	
+
 		# Theming
 		banana-cursor # https://github.com/ful1e5/banana-cursors
 		bibata-cursors
@@ -75,7 +75,7 @@
 		fw-ectool # frmwk laptop
 		brightnessctl
 		popsicle # flashing usb
-		libnotify	
+		libnotify
 		p7zip # 7zip
 		unrar #rar files
 		solaar # for mouse
@@ -84,12 +84,19 @@
 
 
 		# Development
+		android-studio
+		flutter
+	  	jdk17 # appernatly version 17 is goated idk? Java.
 		gh
 		nodejs # obviously need this
 		git
 		github-desktop
 		alacritty
 		docker # docker? hardly ever knew her
+		cabal-install # Haskell package manager
+		ghcid # Haskell compiler for fast reloading
+		haskell-language-server # LSP
+		ghc # Haskell compiler
 		#quickshell
 		#qt6.qtdeclarative # LSP doesn't work with zed for some reason
 		#kdePackages.qtdeclarative
@@ -103,7 +110,7 @@
 
 		# Browsers
 		firefox
-		vivaldi	
+		vivaldi
 		google-chrome
 
 
@@ -122,6 +129,10 @@
 		#betterdiscordctl
 	];
 
+
+    environment.shellAliases = {
+        nixos-flakeswitch = "sudo nixos-rebuild switch --flake ~/dotfiles#nixos";
+    };
 
 
 
@@ -208,13 +219,13 @@
       xdg-desktop-portal-gtk
       xdg-desktop-portal-wlr
     ];
-    
+
     config = {
 	    mango = {
 	    	#default = [ "wlr" "gtk" ];
 	    	default = lib.mkForce [ "wlr" "gtk" ];
 	    };
-    
+
       #hyprland = {
         #default = [
         #  "hyprland"
@@ -265,7 +276,7 @@
 
 #	programs.fish.enable = true;
 
-	
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users."linde" = {
 		isNormalUser = true;
@@ -281,7 +292,7 @@
 	};
 
 	virtualisation.docker.enable = true;
-	
+
 
 
 	hardware.logitech.wireless.enable = true;
@@ -289,13 +300,13 @@
 	programs.nix-ld.enable = true; # to run unpatches binaries
 	programs.mango.enable = true;
 	programs.mango.package = inputs.mangowm.packages.${pkgs.system}.default;
-	
-	
+
+
 	# change bash terminal color to dark blue
 	programs.bash.promptInit = ''
 	  PS1='\[\033[38;2;78;115;188m\][\[\033[38;2;124;178;224m\]\u\[\033[38;2;78;115;188m\]@\[\033[38;2;124;178;224m\]\h\[\033[38;2;78;115;188m\]:\w]\$\[\033[0m\] '
 	'';
-	
+
 	# SYSTEMD SERVICES!!!
 	systemd.services.framework-led-off = {
 		description = "Turn off Framework 13 power LED";
@@ -338,7 +349,7 @@
 	programs.steam.package = pkgs.steam.override {
 	  extraArgs = "-system-composer";
 	};
-  
+
 
 # Some programs need SUID wrappers, can be configured further or are
 # started in user sessions.
@@ -355,7 +366,7 @@
 # 	xwayland.enable = true;
 # };
 
-# notification daemon, though i think quickshell will 
+# notification daemon, though i think quickshell will
 # handle this in the future
 # NOCTALIA SHELL HAS OVERTAKEN!
 #  services.dunst = {
@@ -371,7 +382,7 @@
 #       frame_width = 1;
 #       frame_color = "#45475a";
 #        corner_radius = 4;
-#        
+#
 #        # Behavior
 #        timeout = 5; # Seconds
 #        sort = true;

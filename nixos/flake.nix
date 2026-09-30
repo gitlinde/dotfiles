@@ -35,6 +35,7 @@
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
+		# nixos can't use ~/ for home dir
         ./configuration.nix
         nixos-hardware.nixosModules.framework-13-7040-amd
         qylock.nixosModules.default
@@ -75,6 +76,7 @@
 				# commands
 				# cp -r ~/.config/mpv ~/dotfilesbackup/mpv
 				# rm -r ~/.config/mpv
+				# mv maybe will be something
 
 				programs.home-manager.enable = true;
 			};
