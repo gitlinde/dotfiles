@@ -309,7 +309,7 @@ vertical_format = "{:%H:\\n:%M\\n----UwU\\n----%d.\\n%b} "
 type = "kenn/keybind-cheatsheet:keybinds"
 
 [widget.launcher]
-custom_image = "/home/linde/Pictures/nixoslogo.png"
+custom_image = "/home/linde/dotfiles/nixoslogo.png"
 scale = 1.8
 
 [widget.media]
