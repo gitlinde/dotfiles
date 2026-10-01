@@ -6,6 +6,7 @@
 	- [ ] pdf viewer
 	- [ ] excel/word format (libreoffice?)
 	- [ ] recording (OBS!!!)
+- [ ] Hotkey to add borders
 - [ ] make it easy / doable to dim screen further
 	- litearlly impossible btw 
 - [ ] i need one to move a window from one workspace to another

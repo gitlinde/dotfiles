@@ -95,6 +95,7 @@
 		haskell-language-server # LSP
 		ghc # Haskell compiler
 		nixd # nix LSP
+		python3
 		#quickshell
 		#qt6.qtdeclarative # LSP doesn't work with zed for some reason
 		#kdePackages.qtdeclarative
