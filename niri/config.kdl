@@ -515,7 +515,7 @@ binds {
     // Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+Shift+Space hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
     Mod+Space hotkey-overlay-title="Noctalia app launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
-  
+
     Super+L hotkey-overlay-title="Lock the Screen: qylock" { spawn-sh "qylock-lock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
