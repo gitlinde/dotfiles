@@ -3,7 +3,8 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
+      # ./hardware-configuration.nix
       inputs.mangowm.nixosModules.mango
     ];
 
@@ -81,6 +82,7 @@
 		solaar # for mouse
 		xwayland-satellite # for steam to work
 		devenv # For cachix?
+		kdePackages.kcolorchooser # color picker
 
 
 		# Development
@@ -100,6 +102,8 @@
 		ghc # Haskell compiler
 		nixd # nix LSP
 		python3
+		cool-retro-term
+		# starship # shell prompt
 		#quickshell
 		#qt6.qtdeclarative # LSP doesn't work with zed for some reason
 		#kdePackages.qtdeclarative
@@ -133,9 +137,11 @@
 		#betterdiscordctl
 	];
 
+	# programs.starship.enable = true;
+
 
     environment.shellAliases = {
-        nixos-flakeswitch = "sudo nixos-rebuild switch --flake ~/dotfiles/nixos #nixos";
+        nixos-flakeswitch = "sudo nixos-rebuild switch --flake ~/dotfiles/nixos#nixos --impure"; ## impure so i can access hardware config outside of the git repo
     };
 
 
@@ -278,7 +284,12 @@
 	# Configure console keymap
 	console.keyMap = "dk-latin1";
 
-#	programs.fish.enable = true;
+    programs.fish = {
+        enable = false;
+        interactiveShellInit = ''
+            set fish_greeting # Disable greeting
+        '';
+    };
 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -287,7 +298,7 @@
 		description = "the only real user";
 		extraGroups = [ "networkmanager" "wheel" "docker" ];
 		# packages = with pkgs; [];
-	#	shell = pkgs.fish;
+		#shell = pkgs.fish;
 	};
 
 	virtualisation.vmVariant = {

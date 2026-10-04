@@ -7,6 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "when_closing_with_no_tabs": "platform_default",
+    "accessible_mode": true,
     "gutter": {
         "folds": false
     },
@@ -33,14 +35,8 @@
 
     "theme": {
         "mode": "dark",
-        "light": "One Light",
-        "dark": "Carbonfox - blurred",
-    },
-
-    "indent_guides": {
-        "enabled": true,
-
-        "coloring": "indent_aware",
+        "light": "Dayfox - blurred",
+        "dark": "Blueberry Banana (Transparent)",
     },
     "colorize_brackets": true,
     "buffer_font_features": {
@@ -53,8 +49,25 @@
     // },
 
     "experimental.theme_overrides": {
-        "editor.document_highlight.bracket_background": "#ff000020",
+        // "editor.document_highlight.bracket_background": "#ff000020",
+        "editor.document_highlight.bracket_background": "#505050",
+
+        // "background.appearance": "blurred",
+        // "editor.background": "#0000008F",
+        // "tab_bar.background": "#0000008F",
+        // "terminal.background": "#0000008F",
+        // "panel.background": "#0000008F",
+        // "title_bar.background": "#0000008F",
+        // "status_bar.background": "#0000008F"
+
+
+
+// "editor.background": "#ffffffff"
     },
+
+
+
+
 
     // "theme_overrides": {
     //     "editor.document_highlight.read_background": "#FF0000",
