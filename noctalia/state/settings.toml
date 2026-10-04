@@ -270,21 +270,20 @@ enabled = [
 ]
 
 [shell]
+avatar_path = "/home/linde/Pictures/Wallpapers/wallhaven_rrz76w.jpg"
 external_ip_enabled = true
 lang = "en"
+settings_window_translucent = true
 telemetry_enabled = true
 
     [shell.animation]
     speed = 2.0000000298023224
 
-    [shell.greeter_sync]
-    auto_sync = true
-
 [theme]
 builtin = "Noctalia"
 community_palette = "Oxocarbon"
 mode = "dark"
-source = "wallpaper"
+source = "community"
 wallpaper_scheme = "faithful"
 
     [theme.templates]
@@ -292,22 +291,22 @@ wallpaper_scheme = "faithful"
     enable_community_templates = false
 
 [wallpaper]
-directory = "/home/linde/Pictures/Wallpapers"
+directory = "/home/linde/dotfiles/wallpapers"
 transition = [ "honeycomb" ]
 transition_duration = 2000
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/linde/Pictures/Wallpapers/procedural_lighting_nebula_2k__wallpaper__by_validifyed_dfpxtfp.png"
+    path = "/home/linde/dotfiles/wallpapers/wallhaven_0j29gq.jpg"
 
     [wallpaper.last]
-    path = "/home/linde/Pictures/Wallpapers/procedural_lighting_nebula_2k__wallpaper__by_validifyed_dfpxtfp.png"
+    path = "/home/linde/dotfiles/wallpapers/wallhaven_0j29gq.jpg"
 
     [wallpaper.monitors.DP-3]
     path = "/home/linde/Pictures/Wallpapers/procedural_lighting_nebula_2k__wallpaper__by_validifyed_dfpxtfp.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/linde/Pictures/Wallpapers/bettergate.png"
+    path = "/home/linde/dotfiles/wallpapers/wallhaven_0j29gq.jpg"
 
 [widget.audio_visualizer]
 bands = 127
@@ -339,7 +338,7 @@ vertical_format = "{:%H:\\n:%M\\n----UwU\\n----%d.\\n%b} "
 type = "kenn/keybind-cheatsheet:keybinds"
 
 [widget.launcher]
-custom_image = "/home/linde/dotfiles/nixoslogo.png"
+custom_image = "/home/linde/dotfiles/nixos/nixoslogo.png"
 scale = 1.8
 
 [widget.media]

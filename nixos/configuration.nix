@@ -14,6 +14,9 @@
 		bibata-cursors
 		lyra-cursors
 
+		# gaming
+		osu-lazer
+
 		# Efficiency
 		wl-kbptr # keyboard workflow (generic mouse replacer)
 
@@ -89,6 +92,7 @@
 		git
 		github-desktop
 		alacritty
+		cool-retro-term
 		docker # docker? hardly ever knew her
 		cabal-install # Haskell package manager
 		ghcid # Haskell compiler for fast reloading

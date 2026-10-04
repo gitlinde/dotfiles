@@ -1,5 +1,7 @@
 %% symlinked to an obsidian vault from the repo %%
 - [ ] study if u need a shell prompt. maybe starship?
+- [ ] study if u need to switch away from bash ( fish / zsh)?
+- [ ] sound / notification when battery reaches 100%
 - [ ] find a task manager
 - [ ] find good versions of useful programs
 	- [ ] image viewer
@@ -8,16 +10,20 @@
 	- [ ] recording (OBS!!!)
 - [ ] Hotkey to add borders
 - [ ] make it easy / doable to dim screen further
-	- litearlly impossible btw 
-- [ ] i need one to move a window from one workspace to another
+	- [x] i have per window dim on mango, it sorta works
+		- [ ] Hotkey so everthing under 9% brightness applies to window dim
+- [x] i need one to move a window from one workspace to another
+	- [ ] find a hotkey that isnt annoying?
 - [ ] is there a way to move multiple windows? "tag" feature maybe?
 - [x] scratchpad
 	- [ ] named scratch pad
 		- [ ] actually find a use for them lol?
 - [x] hotkey for turning screen on/off
 - [ ] hotkey for closing everything else than focused window
-	- [ ] in one workspace?
+	- [ ] in one workspace
 - [ ] hotkey for restarting mango
+- [ ] hotkey for enabling / disabling borders dynamically would be cool
+	- [ ] aka. learn to bash script 🥲
 - [ ] DISABLE VIVALDI NOTIFICATIOSN
 	- [x] email
 - [ ] find terminal editor better than micro
