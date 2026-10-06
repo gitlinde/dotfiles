@@ -101,6 +101,7 @@
 		haskell-language-server # LSP
 		ghc # Haskell compiler
 		nixd # nix LSP
+		nil # another nix LSP
 		python3
 		cool-retro-term
 		# starship # shell prompt
