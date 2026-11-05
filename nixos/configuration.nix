@@ -146,6 +146,7 @@
 
     environment.shellAliases = {
         nixos-flakeswitch = "sudo nixos-rebuild switch --flake ~/dotfiles/nixos#nixos --impure"; ## impure so i can access hardware config outside of the git repo
+        nixos-updateswitch = "sudo nix flake update --flake ~/dotfiles/nixos && sudo nixos-rebuild switch --flake ~/dotfiles/nixos#nixos --impure";
     };
 
 	# Allow unfree packages
