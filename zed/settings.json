@@ -7,6 +7,24 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "ensure_final_newline_on_save": false,
+    "remove_trailing_whitespace_on_save": false,
+    "ssh_connections": [
+        {
+            "host": "farsserver.dk",
+            "username": "gerald",
+            "port": 64256,
+            "args": [],
+            "projects": [
+                {
+                    "paths": [
+                        "/var/www/denoserver"
+                    ]
+                }
+            ]
+        }
+    ],
+    "vim_mode": false,
     "when_closing_with_no_tabs": "platform_default",
     "accessible_mode": true,
     "gutter": {
@@ -35,7 +53,7 @@
 
     "theme": {
         "mode": "dark",
-        "light": "Dayfox - blurred",
+        "light": "Noctalia Light Transparent",
         "dark": "Blueberry Banana (Transparent)",
     },
     "colorize_brackets": true,
@@ -48,6 +66,37 @@
     //     },
     // },
 
+
+
+
+    
+    "lsp": {
+    "basedpyright": {
+        "binary": {
+        "path_lookup": true
+        }
+    }
+    },
+
+    
+    
+    
+    // "languages": {
+    //     "Python": {
+    //         "language_server": {
+    //             "name": "pyright",
+    //             "settings": {
+    //                 "python": {
+    //                 "pythonPath": "/nix/store/371w66nm8gjmfda09mn1njwygziwv2h7-python3-3.13.15-env/bin/python"
+    //                 }
+    //             }
+    //         }
+    //     }
+    // },
+    
+
+
+    
     "experimental.theme_overrides": {
         // "editor.document_highlight.bracket_background": "#ff000020",
         "editor.document_highlight.bracket_background": "#505050",
@@ -59,11 +108,11 @@
         // "panel.background": "#0000008F",
         // "title_bar.background": "#0000008F",
         // "status_bar.background": "#0000008F"
-
-
-
-// "editor.background": "#ffffffff"
+        // "editor.background": "#ffffffff"
     },
+
+
+    
 
 
 

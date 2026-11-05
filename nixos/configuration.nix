@@ -83,10 +83,12 @@
 		xwayland-satellite # for steam to work
 		devenv # For cachix?
 		kdePackages.kcolorchooser # color picker
+		wlr-randr # get monitors
 
 
 		# Development
 		android-studio
+		android-tools
 		flutter
 	  	jdk17 # appernatly version 17 is goated idk? Java.
 		gh
@@ -104,6 +106,7 @@
 		nil # another nix LSP
 		python3
 		cool-retro-term
+		uv # Python package manager
 		# starship # shell prompt
 		#quickshell
 		#qt6.qtdeclarative # LSP doesn't work with zed for some reason
@@ -145,9 +148,6 @@
         nixos-flakeswitch = "sudo nixos-rebuild switch --flake ~/dotfiles/nixos#nixos --impure"; ## impure so i can access hardware config outside of the git repo
     };
 
-
-
-
 	# Allow unfree packages
 	nixpkgs.config.allowUnfree = true;
 	nix.settings.experimental-features = [ "nix-command" "flakes" ]; # experimental flakes
@@ -158,7 +158,14 @@
 	  enable = true;
 	  enable32Bit = true;
 	};
-
+    services.ollama = {
+        enable = true;
+        loadModels = [
+            "moondream"
+            # tinyllama?
+            "minicpm-v"
+        ];
+    };
 	# ssh / scp
 	services.openssh.enable = true;
 
