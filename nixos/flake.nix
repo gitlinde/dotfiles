@@ -45,6 +45,17 @@
 				home.username = "linde";
 				home.homeDirectory = "/home/linde";
 				home.stateVersion = "24.05";
+				# DELETE THE LIST FROM HERE IF IT DOENS'T WORK; cd /home/linde/.local/share/applications/
+				xdg.mimeApps = {
+                    enable = true;
+                    defaultApplications = {
+                        "text/html" = "firefox.desktop";
+                        "x-scheme-handler/http" = "firefox.desktop";
+                        "x-scheme-handler/https" = "firefox.desktop";
+                        "x-scheme-handler/about" = "firefox.desktop";
+                        "x-scheme-handler/unknown" = "firefox.desktop";
+                    };
+                };
 
 				# New noctalia V5 config (i hate that it isn't in .conf)
 				# THIS IS THE MOST CURSED THING I HAVE EVER CREATED IT'S TERRIBLE (im keeping it)

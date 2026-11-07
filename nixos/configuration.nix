@@ -16,7 +16,8 @@
 		lyra-cursors
 
 		# gaming
-		osu-lazer
+		deadlock-mod-manager
+		#osu-lazer
 
 		# Efficiency
 		wl-kbptr # keyboard workflow (generic mouse replacer)
@@ -68,7 +69,7 @@
 		neovim
 		micro
 		zed-editor
-		vscode
+		#vscode
 		obsidian
 
 
@@ -79,7 +80,10 @@
 		libnotify
 		p7zip # 7zip
 		unrar #rar files
-		solaar # for mouse
+		#solaar # for mouse
+		piper
+
+
 		xwayland-satellite # for steam to work
 		devenv # For cachix?
 		kdePackages.kcolorchooser # color picker
@@ -87,9 +91,9 @@
 
 
 		# Development
-		android-studio
-		android-tools
-		flutter
+		#android-studio
+		#android-tools
+		#flutter
 	  	jdk17 # appernatly version 17 is goated idk? Java.
 		gh
 		nodejs # obviously need this
@@ -107,6 +111,7 @@
 		python3
 		cool-retro-term
 		uv # Python package manager
+		godot
 		# starship # shell prompt
 		#quickshell
 		#qt6.qtdeclarative # LSP doesn't work with zed for some reason
@@ -123,7 +128,6 @@
 		firefox
 		vivaldi
 		google-chrome
-		ladybird
 
 
 		# Players (music/video)
@@ -141,6 +145,9 @@
 		#betterdiscordctl
 	];
 
+	services.ratbagd.enable = true; # For mouse
+
+	
 	# programs.starship.enable = true;
 
 
@@ -219,10 +226,10 @@
 
 	# for systemctl hibernate to work properly.. hopefully..
 	# This didn't work at all btw
-  #swapDevices = [ {
-  #  device = "/swap/swapfile";
-  #  size = 32 * 1024;
-  #} ];
+	swapDevices = [{
+      device = "/var/lib/swapfile";
+      size = 16*1024; # 16 GiB
+	}];
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -330,15 +337,15 @@
 	'';
 
 	# SYSTEMD SERVICES!!!
-	systemd.services.framework-led-off = {
-		description = "Turn off Framework 13 power LED";
-		wantedBy = [ "multi-user.target" "post-resume.target" ];
-		after = [ "multi-user.target" "post-resume.target" ];
-		serviceConfig = {
-			Type = "oneshot";
-			ExecStart = "${pkgs.fw-ectool}/bin/ectool led power off";
-		};
-	};
+#	systemd.services.framework-led-off = {
+#		description = "Turn off Framework 13 power LED";
+#		wantedBy = [ "multi-user.target" "post-resume.target" ];
+#		after = [ "multi-user.target" "post-resume.target" ];
+#		serviceConfig = {
+#			Type = "oneshot";
+#			ExecStart = "${pkgs.fw-ectool}/bin/ectool led power off";
+#		};
+#	};
 
 	systemd.user.services.openrgb = {
 		unitConfig = {

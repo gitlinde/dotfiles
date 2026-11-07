@@ -13,14 +13,11 @@ overview {
     backdrop-color "#4c566a90"
 }
 cursor {
-    hide-when-typing
+    // hide-when-typing
     // xcursor-size 18
+    xcursor-theme "Banana"
+    xcursor-size 32
 }
-
-// cursor {
-//     xcursor-theme "breeze_cursors"
-//     xcursor-size 48
-// }
 
 
 // Input device configuration.
@@ -84,7 +81,7 @@ input {
 
     // Uncomment this to make the mouse warp to the center of newly focused windows.
     // warp-mouse-to-focus
-    warp-mouse-to-focus mode="center-xy-always"
+    // warp-mouse-to-focus mode="center-xy-always"
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
@@ -109,7 +106,7 @@ output "DP-3" {
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
     // mode "1920x1080@120.030"
-    mode "2880x1920@120"
+    mode "2560x1440@360"
     hot-corners {
         top-left
     }
@@ -378,7 +375,7 @@ animations {
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    slowdown 0.4
+    slowdown 0.7
 }
 
 // animations {
